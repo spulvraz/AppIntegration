@@ -1,0 +1,56 @@
+﻿@*@model ProductViewModel*@
+
+@* adapting to the UI *@
+@using Training.Umbraco.WebSite.UI.ViewModels
+@inherits UmbracoViewPage<ProductViewModel>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout.cshtml";
+
+    //http://localhost:58085/Product/details/2
+}
+
+<div class="row">
+  <div class="col-lg-7">
+    <h2 style="color:red">@Model.Name</h2>
+    <h4 style="color:violet">@Model.Artist</h4>
+    @*<h6 style="color:coral">@Model.DetailsImageUrl</h6>
+    <h6 style="color:green">@Model.Summary</h6>*@
+
+    @Html.Partial("_Rates", Model.Rates)
+
+    <p class="lead" style="color:blue">
+      @Model.Description
+    </p>
+
+    <!-- Review Markup below todo ex. 5 -->
+
+    <!-- Review Markup end -->
+
+    <h3>$@Model.Price</h3>
+
+  </div>
+
+  <div class="col-lg-4">
+    <div class="featurette" id="about">
+      <img class="featurette-image img-circle img-responsive pull-right" src="@Model.ImageUrl">
+    </div>
+  </div>
+
+  <div class="row">
+
+
+    <div class="col-md-12">
+
+      @using (Html.BeginForm("AddToCart", "ShoppingCart", null, FormMethod.Get))
+      {
+        <input type="hidden" name="productId" value="@Model.Id" />
+        <input name="quantity" type="number" style="width: 50px" value="1" />
+        <button type="submit" class="btn btn-info">
+          <i class="fa fa-shopping-cart"></i>
+          Add to cart
+        </button>
+      }
+    </div>
+  </div>
+</div>

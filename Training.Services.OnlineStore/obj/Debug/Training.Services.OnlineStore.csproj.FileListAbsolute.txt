@@ -1,0 +1,7 @@
+C:\REvision Application Integration\Application Integration\Training.Services.OnlineStore\bin\Debug\Training.Services.OnlineStore.dll.config
+C:\REvision Application Integration\Application Integration\Training.Services.OnlineStore\bin\Debug\Training.Services.OnlineStore.dll
+C:\REvision Application Integration\Application Integration\Training.Services.OnlineStore\bin\Debug\Training.Services.OnlineStore.pdb
+C:\REvision Application Integration\Application Integration\Training.Services.OnlineStore\obj\Debug\Training.Services.OnlineStore.csprojResolveAssemblyReference.cache
+C:\REvision Application Integration\Application Integration\Training.Services.OnlineStore\obj\Debug\Training.Services.OnlineStore.csproj.CoreCompileInputs.cache
+C:\REvision Application Integration\Application Integration\Training.Services.OnlineStore\obj\Debug\Training.Services.OnlineStore.dll
+C:\REvision Application Integration\Application Integration\Training.Services.OnlineStore\obj\Debug\Training.Services.OnlineStore.pdb

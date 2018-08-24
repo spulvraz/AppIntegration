@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<TextPage>
+@using Umbraco.Web.PublishedContentModels
+@{
+    Layout = "Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>@Model.Content.Name</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>@Model.Content.Summary</p>
+
+                <img class="img-rounded img-responsive" src="@Model.Content.LeftImage.Url" />
+            </div>
+            <div class="col-md-6">
+                <p>@Model.Content.RichText</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.GetGridHtml(Model.Content, "editorText")
+            </div>
+        </div>
+    </div>
+</div>

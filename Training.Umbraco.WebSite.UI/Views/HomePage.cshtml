@@ -1,0 +1,41 @@
+﻿@* this is the default*@
+@*@inherits UmbracoTemplatePage*@
+
+@* custom temlpate page that inherit from UmbracoTemplatePage*@
+@inherits StoreTemplatePage
+@{
+  Layout = "Layout.cshtml";
+}
+
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="row carousel-holder">
+      <!-- good place for a carousel-->
+      @Html.Action("FeaturedProducts", "Home")
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Top rated products</h2>
+        <!-- good place top rated products listing-->
+        <!-- Training.Services.OnlineStore\Concretes\PetaPocoProductService.cs-->
+        <ul>
+          @foreach (var product in ProductService.GetTopRated(10))
+          {
+            <li>@product.Name</li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Top selling products</h2>
+        <!-- good place for a top selling products macro -->
+        @Umbraco.RenderMacro("TopSelling", new {numberOfItems = "3"})
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+﻿namespace Training.Umbraco.WebSite.UI.ViewModels
+{
+    public class ProductPreviewViewModel : ProductBasicViewModel
+    {
+        public string Summary { get; set; }
+
+        public int Rates { get; set; }
+
+        public string CarouselImageUrl { get; set; }
+
+        public string ImageUrl { get; set; }
+    }
+}
